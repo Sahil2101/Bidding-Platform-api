@@ -10,17 +10,7 @@ Install dependencies:
 bash
 npm install
 
-Set up environment variables in .env file:
 
-plaintext
-
-PORT=3000
-DB_HOST=localhost
-DB_PORT=5432
-DB_USER=yourusername
-DB_PASSWORD=yourpassword
-DB_NAME=bidding_platform
-JWT_SECRET=yourjwtsecret
 
 Run migrations:
 
