@@ -9,3 +9,11 @@ module.exports.isAdminOrOwner = async (req, res, next) => {
   }
   next();
 };
+
+module.exports = (req, res, next) => {
+    const { role } = req.user;
+    if (role !== 'admin' && role !== 'owner') {
+      return res.status(403).json({ error: 'Access denied' });
+    }
+    next();
+  };
